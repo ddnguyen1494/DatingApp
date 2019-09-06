@@ -17,6 +17,7 @@ export class MemberEditComponent implements OnInit {
   photoUrl: string;
   @HostListener('window:beforeunload', ['$event'])
   unloadNotification($event) {
+
     if (this.editForm.dirty) {
       $event.returnValue = true;
     }
@@ -29,6 +30,7 @@ export class MemberEditComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.user = data.user;
     });
+
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
   }
 
