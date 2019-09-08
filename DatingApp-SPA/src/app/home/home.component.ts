@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { registerContentQuery } from '@angular/core/src/render3';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
-  
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {}
