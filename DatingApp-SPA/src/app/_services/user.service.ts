@@ -26,7 +26,7 @@ export class UserService {
       params = params.append('pageSize', itemsPerPage);
     }
 
-    if(userParams != null) {
+    if (userParams != null) {
       params = params.append('minAge', userParams.minAge);
       params = params.append('maxAge', userParams.maxAge);
       params = params.append('gender', userParams.gender);
@@ -37,7 +37,7 @@ export class UserService {
       params = params.append('likers', 'true');
     }
 
-    if (likeParams === "Likees") {
+    if (likeParams === 'Likees') {
       params = params.append('likees' , 'true');
     }
 
@@ -46,7 +46,7 @@ export class UserService {
         map(response => {
           paginatedResult.result = response.body;
           if (response.headers.get('Pagination') != null) {
-            paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'))
+            paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'));
             return paginatedResult;
           }
         })
