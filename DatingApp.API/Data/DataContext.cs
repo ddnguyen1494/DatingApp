@@ -30,7 +30,7 @@ namespace DatingApp.API.Data
                     .WithMany(r => r.UserRoles)
                     .HasForeignKey(ur => ur.UserId)
                     .IsRequired();
-            })
+            });
 
             builder.Entity<Like>()
                 .HasKey(like => new {like.LikeeId, like.LikerId});
