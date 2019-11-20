@@ -11,3 +11,23 @@ img.img-thumbnail {
 input[type=file] {
     color: transparent;
 }
+
+img.img-grayscale {
+    height: 100px;
+    min-width: 100px !important;
+    margin-bottom: 2px;
+    filter: grayscale(100%);
+}
+
+div.awaiting-approval {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+
+div.container {
+    position: relative;
+    text-align: center;
+}

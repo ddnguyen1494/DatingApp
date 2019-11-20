@@ -109,6 +109,9 @@ namespace DatingApp.API.Controllers
             if (photoFromRepo.IsMain)
                 return BadRequest("This is already the main photo");
             
+            if (!photoFromRepo.IsApproved)
+                return BadRequest("This photo has not been approved");
+                
             var currentMainPhoto = await _repo.GetMainPhotoForUser(userId);
 
             currentMainPhoto.IsMain = false;

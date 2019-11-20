@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-2" *ngFor="let photo of photos">
+    <div class="text-center">
+      <h3>{{photo.owner}}</h3>
+      <img src="{{photo.url}}" alt="" class="img-thumbnail p-1">
+      <button type="button" class="btn btn-sm mr-1 btn-success active" 
+        (click)="approvePhoto(photo.id)">
+        Approve
+      </button>
+      <button type="button" class="btn btn-sm btn-danger"
+        (click)="rejectPhoto(photo.id)">
+        Reject</button>
+    </div>
+  </div>
+</div>
